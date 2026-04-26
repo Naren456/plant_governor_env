@@ -36,11 +36,11 @@ except Exception as e:  # pragma: no cover
     ) from e
 
 try:
-    from ..models import PlantAction, PlantObservation
-    from .plant_governor_env_environment import PlantGovernorEnvironment
-except (ImportError, ModuleNotFoundError):
     from models import PlantAction, PlantObservation
     from server.plant_governor_env_environment import PlantGovernorEnvironment
+except (ImportError, ModuleNotFoundError):
+    from .models import PlantAction, PlantObservation
+    from .server.plant_governor_env_environment import PlantGovernorEnvironment
 
 
 # Create the app with web interface and README integration
