@@ -18,9 +18,9 @@ dependencies = [
     # install from github
     # "openenv-core[core] @ git+https://github.com/meta-pytorch/OpenEnv.git",
     "openenv-core[core]>=0.2.2",
-    # Environment-specific dependencies
     "pandas>=2.0.0",
     "numpy>=1.24.0",
+    "pydantic==1.10.21",
 ]
 
 [project.optional-dependencies]
