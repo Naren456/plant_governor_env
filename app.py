@@ -49,7 +49,6 @@ app = create_app(
     PlantAction,
     PlantObservation,
     env_name="plant_governor_env",
-    base_path="/",
     max_concurrent_envs=1,
 )
 
