@@ -43,12 +43,13 @@ except (ImportError, ModuleNotFoundError):
     from .server.plant_governor_env_environment import PlantGovernorEnvironment
 
 
-# Create the app with web interface and README integration
+# Create the app with web interface and default OpenEnv routing
 app = create_app(
     PlantGovernorEnvironment,
     PlantAction,
     PlantObservation,
     env_name="plant_governor_env",
+    base_path="/web",
     max_concurrent_envs=1,  # increase this number to allow more concurrent WebSocket sessions
 )
 
