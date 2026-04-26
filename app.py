@@ -43,13 +43,14 @@ except (ImportError, ModuleNotFoundError):
     from .server.plant_governor_env_environment import PlantGovernorEnvironment
 
 
-# Create the app with web interface and default OpenEnv routing
+# Create the app with the Playground as the default dashboard
 app = create_app(
     PlantGovernorEnvironment,
     PlantAction,
     PlantObservation,
     env_name="plant_governor_env",
-    max_concurrent_envs=1,  # increase this number to allow more concurrent WebSocket sessions
+    base_path="/",
+    max_concurrent_envs=1,
 )
 
 
